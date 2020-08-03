@@ -1,0 +1,10 @@
+class CreateRole < ActiveRecord::Migration<%= migration_version %>
+  def change
+    create_table :roles<%= table_options %> do |t|
+      t.string :name
+
+      t.belongs_to :owner
+      t.timestamps
+    end
+  end
+end

@@ -1,0 +1,9 @@
+class CreateTeamUser < ActiveRecord::Migration<%= migration_version %>
+  def change
+    create_table :team_users<%= table_options %> do |t|
+      t.belongs_to :user
+      t.belongs_to :team
+      t.timestamps
+    end
+  end
+end

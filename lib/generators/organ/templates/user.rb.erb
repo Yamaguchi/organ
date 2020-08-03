@@ -1,0 +1,11 @@
+class CreateUser < ActiveRecord::Migration<%= migration_version %>
+  def change
+    create_table :users<%= table_options %> do |t|
+      t.string :name
+      t.belongs_to :organization_unit
+
+      t.belongs_to :owner
+      t.timestamps
+    end
+  end
+end

@@ -1,0 +1,9 @@
+class CreateRoleUser < ActiveRecord::Migration<%= migration_version %>
+  def change
+    create_table :role_users<%= table_options %> do |t|
+      t.belongs_to :role
+      t.belongs_to :user
+      t.timestamps
+    end
+  end
+end

@@ -1,0 +1,11 @@
+class CreateRoleEntityPrivilege < ActiveRecord::Migration<%= migration_version %>
+  def change
+    create_table :role_entity_privileges<%= table_options %> do |t|
+      t.belongs_to :role
+      t.belongs_to :entity_privilege
+
+      t.timestamps
+    end
+  end
+end
+
